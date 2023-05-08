@@ -1,24 +1,27 @@
 package com.jmc.javafxmasteryclass;
 
 import javafx.application.Application;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
+//import javafx.beans.property.ReadOnlyIntegerProperty;
+//import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
-        VBox root = new VBox();
-        root.setAlignment(Pos.CENTER);
-        root.setSpacing(10);
+    public void start(Stage stage) {
+//        ReadOnlyIntegerWrapper numWrapper = new ReadOnlyIntegerWrapper(100);
+//        ReadOnlyIntegerProperty num = numWrapper.getReadOnlyProperty();
+//        System.out.println("numWrapper: " + numWrapper.get());
+//        System.out.println("num: " + num.get());
+//
+//        numWrapper.set(200);
+//        System.out.println("numWrapper: " + numWrapper.get());
+//        System.out.println("num: " + num.get());
 
+        Constant constant = new Constant(100);
+        constant.changeConstant();
+        System.out.println(constant.getReadOnlyNumber().get());
 
-        root.getChildren().addAll();
-        Scene scene = new Scene(root, 500, 500);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public static void main(String[] args) {
