@@ -2,6 +2,7 @@ package com.jmc.javafxmasteryclass;
 
 import javafx.application.Application;
 import javafx.event.Event;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +22,8 @@ public class Main extends Application {
 
         Label label = new Label("This is label");
         Button button = new Button("Click");
+        button.setPrefWidth(100);
+        button.setPadding(new Insets(10, 20, 30,40));
 
         root.getChildren().addAll(label, button);
 
